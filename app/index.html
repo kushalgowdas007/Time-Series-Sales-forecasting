@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retail Demand Forecast</title>
+</head>
+<body>
+    <h2>Next 7 Days Demand Forecast</h2>
+    <ul>
+        {% for value in forecast %}
+        <li>{{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
