@@ -1,6 +1,6 @@
-from src.data_preprocessing import preprocess_data
-from src.feature_engineering import create_features
-from src.train_model import train_model
+from src.utils.preprocessing import preprocess_data
+from src.utils.feature_engineering import create_features
+from src.forecasting.train_model import train_model
 
 raw_path = "data/raw/sales.csv"
 processed_path = "data/processed/cleaned_sales.csv"
