@@ -1,42 +1,36 @@
 def classify_risk(
         inventory,
-        forecast):
+        forecast,
+        confidence):
 
-    risk_score = 0
+    score = 0
 
     if forecast > inventory:
-        risk_score += 50
+        score += 40
+
+    if confidence < 70:
+        score += 30
 
     demand_ratio = forecast / max(
         inventory,
         1
     )
 
-    risk_score += min(
-        int(demand_ratio * 25),
-        50
+    score += min(
+        int(demand_ratio * 20),
+        30
     )
 
-    if risk_score >= 75:
+    if score >= 70:
         category = "HIGH"
 
-    elif risk_score >= 40:
+    elif score >= 40:
         category = "MEDIUM"
 
     else:
         category = "LOW"
 
     return {
-        "risk_score": risk_score,
+        "score": score,
         "category": category
     }
-
-
-if __name__ == "__main__":
-
-    print(
-        classify_risk(
-            inventory=100,
-            forecast=200
-        )
-    )

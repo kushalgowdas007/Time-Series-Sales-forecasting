@@ -64,3 +64,18 @@ print(reorder)
 
 print("\n===== REVENUE FORECAST =====")
 print(finance)
+
+def get_forecast():
+
+    with open(model_path, "rb") as f:
+        model = pickle.load(f)
+
+    forecast = model.forecast(steps=7)
+
+    return forecast
+
+if __name__ == "__main__":
+
+    forecast = get_forecast()
+
+    print(forecast)
