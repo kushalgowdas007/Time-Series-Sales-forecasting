@@ -2,6 +2,7 @@ from src.agents.demand_agent import run_demand_agent
 from src.agents.inventory_agent import run_inventory_agent
 from src.agents.risk_agent import run_risk_agent
 from src.agents.finance_agent import run_finance_agent
+from src.agents.simulation_agent import run_simulation_agent
 
 
 inventory = 100
@@ -53,3 +54,14 @@ print(risk_result)
 
 print("\nFinance")
 print(finance_result)
+
+#simulation agent
+
+simulation_result = run_simulation_agent(
+    inventory,
+    forecast_value,
+    price
+)
+
+print("\nSimulation")
+print(simulation_result)
