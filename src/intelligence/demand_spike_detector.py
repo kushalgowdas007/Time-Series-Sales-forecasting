@@ -12,12 +12,12 @@ def detect_spike(series):
     if spike_ratio > 1.5:
         return {
             "spike_detected": True,
-            "spike_ratio": round(spike_ratio, 2)
+            "spike_ratio": float(round(spike_ratio, 2))
         }
 
     return {
         "spike_detected": False,
-        "spike_ratio": round(spike_ratio, 2)
+        "spike_ratio": float(round(spike_ratio, 2))
     }
 
 

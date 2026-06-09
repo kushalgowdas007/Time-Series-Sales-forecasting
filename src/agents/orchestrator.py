@@ -3,6 +3,10 @@ from src.agents.inventory_agent import run_inventory_agent
 from src.agents.risk_agent import run_risk_agent
 from src.agents.finance_agent import run_finance_agent
 from src.agents.simulation_agent import run_simulation_agent
+from src.agents.executive_agent import run_executive_agent
+from src.agents.autonomous_replenishment_agent import (
+    run_autonomous_replenishment
+)
 
 
 inventory = 100
@@ -65,3 +69,38 @@ simulation_result = run_simulation_agent(
 
 print("\nSimulation")
 print(simulation_result)
+
+#autonomous replenishment agent
+
+auto_replenishment = (
+    run_autonomous_replenishment(
+        inventory=inventory,
+        forecast=forecast_value,
+        safety_stock=
+        risk_result["safety_stock"]["safety_stock"]
+    )
+)
+
+print("\nAutonomous Replenishment")
+print(auto_replenishment)
+
+#Executive Agent
+
+executive_result = run_executive_agent(
+    inventory_result,
+    risk_result,
+    finance_result
+)
+
+print("\nExecutive Summary")
+print(executive_result)
+
+def run_pipeline():
+
+    return {
+        "forecast": 32,
+        "revenue": 3840,
+        "profit": 960,
+        "risk": "LOW",
+        "status": "HEALTHY"
+    }
