@@ -40,3 +40,10 @@ htmlcov/
 
 # Streamlit cache (if you use Streamlit later)
 .streamlit/
+
+__pycache__/
+*.pyc
+venv/
+.env
+.idea/
+.vscode/

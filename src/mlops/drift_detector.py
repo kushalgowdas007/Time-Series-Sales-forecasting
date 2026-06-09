@@ -1,13 +1,26 @@
 import numpy as np
 
-def detect_drift(old_data, new_data):
+def detect_drift(
+        historical_sales,
+        recent_sales):
 
-    old_mean = np.mean(old_data)
-    new_mean = np.mean(new_data)
+    historical_mean = np.mean(
+        historical_sales
+    )
 
-    drift = abs(new_mean - old_mean)
+    recent_mean = np.mean(
+        recent_sales
+    )
+
+    drift_score = abs(
+        recent_mean -
+        historical_mean
+    )
 
     return {
-        "drift_score": round(drift, 2),
-        "drift_detected": drift > 20
+        "drift_score":
+            round(float(drift_score), 2),
+
+        "drift_detected":
+            drift_score > 20
     }
