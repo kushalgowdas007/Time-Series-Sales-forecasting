@@ -5,6 +5,7 @@ __pycache__/
 # Virtual environment
 venv/
 .env/
+.env
 
 # VS Code
 .vscode/
@@ -12,9 +13,10 @@ venv/
 # Jupyter
 .ipynb_checkpoints/
 
-# Model files (optional)
-*.pkl
-*.joblib
+# Model files
+# Keep tracked .pkl model files in Git
+# *.pkl
+# *.joblib
 
 # OS files
 .DS_Store
@@ -38,12 +40,8 @@ dist/
 .coverage
 htmlcov/
 
-# Streamlit cache (if you use Streamlit later)
+# Streamlit
 .streamlit/
 
-__pycache__/
-*.pyc
-venv/
-.env
-.idea/
-.vscode/
+# Vercel local files
+.vercel/

@@ -1,11 +1,7 @@
 fastapi==0.129.1
 uvicorn==0.41.0
+pydantic==2.12.5
 pandas==2.3.3
 numpy==2.2.6
 statsmodels==0.14.6
 scikit-learn==1.7.2
-scipy==1.15.3
-streamlit==1.52.2
-plotly==6.7.0
-pydantic==2.12.5
-joblib==1.5.3
